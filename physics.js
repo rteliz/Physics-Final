@@ -9,10 +9,22 @@ const terminal = readline.createInterface({
 });
 
 terminal.question("What type of equation are you looking for?",function(str){
-
-    //you will configure your series of questions inside here.
-
-
+  //you will configure your series of questions inside here.
+  if(str=="motion"){
+    terminal.question("which variable are you solving for?", function(str){
+      if(str=="d"){
+        terminal.question("Do you know acceleration?"). function(str){
+          if(str=="no"){
+            motion.distance1();
+          }
+          else{
+            motion.distance2();
+          }
+        }
+      }
+      else if()
+    }
+  }
 });
 
 function distance(v,t){
