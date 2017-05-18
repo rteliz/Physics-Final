@@ -8,30 +8,41 @@ const terminal = readline.createInterface({
     output:process.stdout
 });
 
-terminal.question("What type of equation are you looking for?",function(str){
-  //you will configure your series of questions inside here.
-  if(str=="motion"){
-    terminal.question("which variable are you solving for?", function(str){
-      if(str=="d"){
-        terminal.question("Do you know acceleration?"). function(str){
-          if(str=="no"){
-            motion.distance1();
-          }
-          else{
-            motion.distance2();
-          }
-        }
-      }
-      else if()
-    }
-  }
-});
+function printOptions(){
+    console.log("\nEnter the variables you know in a comma list.");
+    console.log("If you do not know a variable, then type n");
+    console.log("distance,velocity,acceleration,time,mass,energy");
+}
 
-function distance(v,t){
-    let distance=v*t;
-    return distance;
+terminal.question("What type of equation are you looking for?",function(str){
+    str.toLowerCase();
+    //you will configure your series of questions inside here.
+    if(str=="motion"){
+        terminal.question("which variable are you solving for?", function(str){
+            str.toLowerCase();
+            if(str=="d"){
+                printOptions();
+                terminal.question("...",function(str)){
+                    str.toLowerCase();
+                    convertToArray(strcma)
+                    if(str[2]==NaN){
+                        return motion.distance(str[1],str[3]);
+                    }
+                    else{
+                        return motion.distance2(str[2],str[3],str[1]);
+                    }
+                }
+
+                }
+
+                };
+            }
+        }
+    }
 }
-function ke(m,v){
-    let energy=m*v*v/2;
-    return energy;
+    else if(str=="energy"){
+
+    }
 }
+}
+});
